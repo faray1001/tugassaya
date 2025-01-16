@@ -1,0 +1,4 @@
+const kata1 = 'faray';
+const kata2 = 'akan succes di akhirat dan di dunia aamiin';
+const kalimat = kata1.concat(' ', kata2); // Menggabungkan 'faray' dan 'akan succes di akhirat dan di dunia'
+console.log(kalimat); // Output: 'faray akan succes di akhirat dan di dunia'

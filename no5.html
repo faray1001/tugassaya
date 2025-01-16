@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhitungan Gaji Karyawan</title>
+    <script>
+        function hitungGaji() {
+            const gajiasli = 7000000;
+            const jamnormal = 40;
+            const gajiLemburPerJam = 100000;
+            const jamKerja = parseInt(document.getElementById("jamKerja").value);
+            let totalGaji;
+
+            if (jamKerja > jamnormal) {
+                const jamLembur = jamKerja - jamnormal;
+                const gajiLembur = jamLembur * gajiLemburPerJam;
+                totalGaji = gajiasli + gajiLembur;  
+            } else {
+                totalGaji = gajiasli;
+            }
+            document.write(`<h2>Total gaji Sarip adalah: Rp. ${totalGaji.toLocaleString()}</h2>`);
+        }
+    </script>
+</head>
