@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nama Bulan Hijriyah</title>
+  <script>
+    // Daftar nama bulan pada kalender Islam
+    const bulanHijriyah = [
+      "Muharram", 
+      "Safar", 
+      "Rabi'ul Awwal", 
+      "Rabi'ul Akhir", 
+      "Jumadil Awwal", 
+      "Jumadil Akhir", 
+      "Rajab", 
+      "Sya'ban", 
+      "Ramadhan", 
+      "Syawwal", 
+      "Dzulqa'dah", 
+      "Dzulhijjah"
+    ];
+
+    // Fungsi untuk menampilkan nama bulan berdasarkan input
+    function tampilkanNamaBulan() {
+      const angka = parseInt(document.getElementById("inputAngka").value, 10);
+      const output = document.getElementById("output");
+
+      if (angka >= 1 && angka <= 12) {
+        output.textContent = `Bulan ke-${angka} dalam kalender Islam adalah: ${bulanHijriyah[angka - 1]}`;
+      } else {
+        output.textContent = "Angka yang dimasukkan tidak valid. Harap masukkan angka antara 1 hingga 12.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Nama Bulan Hijriyah</h1>
+  <p>Masukkan angka (1-12) untuk mengetahui nama bulan pada kalender Islam:</p>
+  <input type="number" id="inputAngka" placeholder="Masukkan angka" min="1" max="12">
+  <button onclick="tampilkanNamaBulan()">Tampilkan Nama Bulan</button>
+  <p id="output" style="margin-top: 20px; font-weight: bold;"></p>
+</body>
+</html>

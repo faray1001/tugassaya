@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <title>Cek Angka</title>
+  <script>
+    function cekAngka() {
+      const angka = parseFloat(document.getElementById("angka").value);
+      let hasil;
+      if (angka > 0) hasil = "Angka positif.";
+      else if (angka < 0) hasil = "Angka negatif.";
+      else hasil = "Angka nol.";
+      document.getElementById("hasil").textContent = hasil;
+    }
+  </script>
+</head>
+<body>
+  <h1>Cek Angka Positif, Negatif, atau Nol</h1>
+  <input id="angka" type="number" placeholder="Masukkan angka">
+  <button onclick="cekAngka()">Cek</button>
+  <p id="hasil"></p>
+</body>
+</html>
